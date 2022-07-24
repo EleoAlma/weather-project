@@ -155,3 +155,9 @@ a {
   padding-right: 6px;
   margin-right: 6px;
 }
+
+.open-source {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0rem;
+}
