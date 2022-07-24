@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app-wrapper">
+            <div class="weather-app">
+                <div class="row">
+                    <div class="col-12 location-input">
+                        <form action="" id="form-input">
+                            <input type="search" class="form-control shadow-sm" name="enter-city" id="enter-city"
+                                placeholder="Enter a location..." autocomplete="off" autofocus>
+                            <input type="submit" value="Go" class="btn btn-primary shadow-sm go">
+                            <input type="button" value="📍" class="btn btn-primary shadow-sm location"
+                                id="button-location">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 current">
+                    <h1 class="current-city" id="current-city">
+                        <span class="current-city city" id="name-city">London</span>
+                        <span class="current-city temperature" id="temperature">21</span>
+                        <sup>
+                            <a class="celsius" id="celsius" href="#">&#176C</a>
+                            <a class="fahrenheit" id="fahrenheit" href="#">&#176F</a>
+                        </sup>
+                        ☀️
+                    </h1>
+                    <ul class="current-date">
+                        <li class="current-date-element">
+                            Tuesday, June 21, 18:18
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="weather-conditions">
+                        <li id="description">
+                            Clear Sky
+                        </li>
+                        <li>
+                            Humidity: <span id="humidity">48</span>%
+                        </li>
+                        <li>
+                            Wind: <span id="wind">7</span> km/h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row forecast">
+                <div class="col forecast-day">
+                    <div class="forecast-day-week">
+                        Wednesday
+                    </div>
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temperature">
+                            26&#176
+                        </span>
+                        <span class="forecast-max-temperature">
+                            20&#176
+                        </span>
+                    </div>
+                    <div class="forecast-icon">
+                        🌦️
+                    </div>
+                </div>
+                <div class="col forecast-day">
+                    <div class="forecast-day-week">
+                        Thursday
+                    </div>
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temperature">
+                            21&#176
+                        </span>
+                        <span class="forecast-max-temperature">
+                            14&#176
+                        </span>
+                    </div>
+                    <div class="forecast-icon">
+                        ⛈️
+                    </div>
+                </div>
+                <div class="col forecast-day">
+                    <div class="forecast-day-week">
+                        Friday
+                    </div>
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temperature">
+                            22&#176
+                        </span>
+                        <span class="forecast-max-temperature">
+                            20&#176
+                        </span>
+                    </div>
+                    <div class="forecast-icon">
+                        ⛅
+                    </div>
+                </div>
+                <div class="col forecast-day">
+                    <div class="forecast-day-week">
+                        Saturday
+                    </div>
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temperature">
+                            27&#176
+                        </span>
+                        <span class="forecast-max-temperature">
+                            22&#176
+                        </span>
+                    </div>
+                    <div class="forecast-icon">
+                        🌤️
+                    </div>
+                </div>
+                <div class="col forecast-day">
+                    <div class="forecast-day-week">
+                        Sunday
+                    </div>
+                    <div class="forecast-temperature">
+                        <span class="forecast-min-temperature">
+                            25&#176
+                        </span>
+                        <span class="forecast-max-temperature">
+                            23&#176
+                        </span>
+                    </div>
+                    <div class="forecast-icon">
+                        ⛅
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="/src/index.js"></script>
+</body>
+
+</html>
