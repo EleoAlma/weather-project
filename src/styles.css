@@ -89,7 +89,6 @@ input::placeholder {
 
 .current-city .temperature {
   font-size: 3rem;
-  padding-right: 0.5rem;
 }
 
 sup {
@@ -129,7 +128,7 @@ a {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.weather-conditions li:first-child {
+.weather-conditions li:first-child::first-letter {
   margin-top: 10px;
   text-transform: capitalize;
 }

@@ -32,7 +32,14 @@ function formatDate(currentDate) {
 
   let date = currentDate.getDate();
   let hour = currentDate.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
   let minutes = currentDate.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   let rightDate = `${day}, ${month} ${date}, ${hour}:${minutes}`;
 
