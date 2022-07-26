@@ -75,7 +75,7 @@ function displayTemperature(response) {
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");

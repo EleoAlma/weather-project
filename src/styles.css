@@ -131,6 +131,7 @@ a {
 
 .weather-conditions li:first-child {
   margin-top: 10px;
+  text-transform: capitalize;
 }
 
 .forecast {
