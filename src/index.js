@@ -74,7 +74,7 @@ formatDate(displayNow);
 // let tempCel = document.querySelector("#celsius");
 // tempCel.addEventListener("clic k", temperatureCel);
 
-// Search Engine
+// Search Engine   ПОДУМАТЬ НАД ДАТОЙ!  видео про апи интегратион
 
 function displayTemperature(response) {
   let cityName = document.querySelector("#name-city");
@@ -87,6 +87,12 @@ function displayTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
