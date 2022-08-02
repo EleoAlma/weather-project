@@ -16,7 +16,7 @@
   }
 }
 .container {
-  max-width: 720px;
+  max-width: 760px;
   display: block;
   margin: 50px auto 10px auto;
   text-align: left;
@@ -89,6 +89,12 @@ input::placeholder {
 
 .current-city .temperature {
   font-size: 3rem;
+  padding-right: 0.5rem;
+}
+
+.current .active {
+  color: rgba(0, 0, 0, 0.7);
+  cursor: default;
 }
 
 sup {
@@ -109,7 +115,7 @@ a {
 
 .current-date {
   display: inline-block;
-  width: 55%;
+  width: 70%;
   margin-top: -10px;
   margin-bottom: 10px;
   font-size: 0.9rem;
@@ -121,7 +127,7 @@ a {
 }
 
 .weather-conditions {
-  margin-left: 2.5rem;
+  margin-top: 1rem;
   list-style: none;
   display: inline-block;
   padding: 5px 10px;

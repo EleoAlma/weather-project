@@ -74,13 +74,13 @@ formatDate(displayNow);
 // let tempCel = document.querySelector("#celsius");
 // tempCel.addEventListener("clic k", temperatureCel);
 
-// Search Engine   ПОДУМАТЬ НАД ДАТОЙ!  видео про апи интегратион
-
 function displayTemperature(response) {
   let cityName = document.querySelector("#name-city");
   cityName.innerHTML = response.data.name;
   let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
@@ -127,3 +127,28 @@ let activedLocation = document.querySelector("#button-location");
 activedLocation.addEventListener("click", geolocation);
 
 searchCity("London");
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
+}
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsiusTemperature);
