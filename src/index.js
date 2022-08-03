@@ -1,4 +1,3 @@
-// Feature #1
 
 function formatDate(currentDate) {
   let months = [
@@ -49,30 +48,6 @@ function formatDate(currentDate) {
 
 let displayNow = new Date();
 formatDate(displayNow);
-
-// Bonus Feature week 4
-
-// function temperatureFah(event) {
-//   event.preventDefault();
-
-//   let tempCel = document.querySelector("#temperature");
-//   let currentTemp = tempCel.innerHTML;
-//   let tempFah = Math.round(currentTemp * 1.8 + 32);
-//   tempCel.innerHTML = tempFah;
-// }
-
-// function temperatureCel(event) {
-//   event.preventDefault();
-
-//   let tempCel = document.querySelector("#temperature");
-//   let currentTemp = 21;
-//   tempCel.innerHTML = currentTemp;
-// }
-
-// let tempFah = document.querySelector("#fahrenheit");
-// tempFah.addEventListener("click", temperatureFah);
-// let tempCel = document.querySelector("#celsius");
-// tempCel.addEventListener("clic k", temperatureCel);
 
 function displayTemperature(response) {
   let cityName = document.querySelector("#name-city");
