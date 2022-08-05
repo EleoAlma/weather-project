@@ -95,6 +95,23 @@ function getForecast(coordinates) {
   axios.get(apiURL).then(displayForecast);
 }
 
+// <div class="col forecast-day">
+//   <div class="forecast-day-week">
+//         ${day}
+//   </div>
+//   <div class="forecast-temperature">
+//     <span class="forecast-max-temperature">
+//       26&#176
+//     </span>
+//     <span class="forecast-min-temperature">
+//       20&#176
+//     </span>
+//   </div>
+//   <div class="forecast-icon">
+//   d="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Icon of forecast weather"></id=>
+//   </div>
+// </div>
+
 function displayTemperature(response) {
   let cityName = document.querySelector("#name-city");
   cityName.innerHTML = response.data.name;
@@ -122,7 +139,6 @@ function searchCity(city) {
   let apiKey = "96eb20764d4adbb57fa516a1544ed0a1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
-  displayForecast();
 }
 
 function enterLocation(event) {
