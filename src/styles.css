@@ -157,11 +157,19 @@ a {
 .forecast-day-week {
   font-weight: 500;
 }
-.forecast-min-temperature::after {
+
+.forecast-max-temperature::after {
   content: "";
   border-right: 1px solid #d0d0d0;
-  padding-right: 6px;
   margin-right: 6px;
+}
+
+.forecast-min-temperature {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.forecast-icon img {
+  width: 50px;
 }
 
 .open-source {
