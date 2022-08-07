@@ -39,7 +39,7 @@ function formatDate(currentDate) {
     minutes = `0${minutes}`;
   }
 
-  let rightDate = `${day}, ${month} ${date}, ${hour}:${minutes}`;
+  let rightDate = `Last updated at: ${day}, ${month} ${date}, ${hour}:${minutes}`;
 
   let dateElement = document.querySelector(".current-date-element");
   dateElement.innerHTML = rightDate;
@@ -105,23 +105,6 @@ function getForecast(coordinates) {
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayForecast);
 }
-
-// <div class="col forecast-day">
-//   <div class="forecast-day-week">
-//         ${day}
-//   </div>
-//   <div class="forecast-temperature">
-//     <span class="forecast-max-temperature">
-//       26&#176
-//     </span>
-//     <span class="forecast-min-temperature">
-//       20&#176
-//     </span>
-//   </div>
-//   <div class="forecast-icon">
-//   d="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Icon of forecast weather"></id=>
-//   </div>
-// </div>
 
 function displayTemperature(response) {
   let cityName = document.querySelector("#name-city");

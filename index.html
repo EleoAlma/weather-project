@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-9 current">
+                    <div class="col-sm-12 col-md-9 col-lg-9 current">
                         <h1 class="current-city" id="current-city">
                             <span class="current-city city" id="name-city">London</span>
                             <span class="current-city temperature" id="temperature">21</span>
@@ -41,15 +41,15 @@
                                 <a class="active" id="celsius" href="#">&#176C</a>
                                 <a class="fahrenheit" id="fahrenheit" href="#">&#176F</a>
                             </sup>
-                            <img id="icon" src="#" alt="Icon of current weather"></img>
+                            <img class="main-icon" id="icon" src="#" alt="Icon of current weather"></img>
                         </h1>
                         <ul class="current-date">
                             <li class="current-date-element">
-                                Tuesday, June 21, 18:18
+                                Last updated at: Tuesday, June 21, 18:18
                             </li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-sm-12 col-md-3 col-lg-3">
                         <ul class="weather-conditions">
                             <li id="description">
                                 Clear Sky
@@ -69,12 +69,15 @@
 
             </div>
         </div>
+        <div class="row open-source">
+            <div class="col">
+                <a href="https://github.com/EleoAlma/weather-project" target="_blank">Open-source
+                    code</a>, by Eleonora
+                Zahrubska-Voloshchuk
+            </div>
+        </div>
     </div>
 
-    <div class="open-source">
-        <a href="https://github.com/EleoAlma/weather-project" target="_blank">Open-source code</a>, by Eleonora
-        Zahrubska-Voloshchuk
-    </div>
     <script src="/src/index.js"></script>
 </body>
 
